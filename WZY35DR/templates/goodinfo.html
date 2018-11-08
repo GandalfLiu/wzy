@@ -1,0 +1,660 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>戴瑞主页</title>
+	<link rel="stylesheet" href="{% static 'css/style1.css' %}">
+	<link rel="stylesheet" href="{% static 'css/reset.css' %}">
+	<link rel="stylesheet" href="{% static 'css/goodsinfo.css' %}">
+	<script src="{% static 'js/jquery-1.12.0.js' %}"></script>
+	<script src="{% static 'js/index.js' %}"></script>
+	<script src="{% static 'js/goodinfo.js' %}"></script>
+	<script src="{% static 'js/banner.js' %}"></script>
+	<script src="{% static 'js/jquery.cookie.js' %}"></script>
+
+
+</head>
+<body>
+<!-- 头部 -->
+	<div class="header">
+		<div class="header_cen">
+			<div class="header_cen_lf">
+				<a href="#"><img src="{% static 'images/drlogo.png' %}" alt=""></a>
+			</div>
+			<div class="header_cen_rg">
+				<div class="header_cen_rg_top">
+					<ul>
+						<li class="dl">登录</li>
+						<li class="join"><a href="#">加入DR族</a></li>
+						<li class="num"> 400 01 13520</li>
+						<li class="mobile">DR族APP
+							<div>
+								<img src="{% static 'images/app_ewm.jpg' %}" alt="">
+								<p>信仰真爱的DR族都在扫码下载手机应用</p>
+							</div>
+						</li>
+						<li class="lan"><a href="#" id="StranLink">中文 (繁体)</a><script language="JavaScript" src="js/big52gb.js" type="text/javascript"></script>
+							<ul>
+								<!-- <li><a href="#" class="tra">中文(繁体)</a></li> -->
+								<li><a href="#">English</a></li>
+							</ul>
+						</li>
+						<li class="city">所在城市店铺:</li>
+							<div class="allCity">
+								<!-- <span>岳阳</span> -->
+							</div>
+					</ul>
+				</div>
+				<div class="header_cen_rg_bot">
+					<img src="{% static 'images/drz.png' %}" alt="">
+					<div class="info">
+						<select name="" id="">
+							<option value="中国大陆" selected="selected">中国大陆</option>
+							<option value="海外地区">海外地区</option>
+							<option value="港澳台">港澳台</option>
+							<option value="其他">其他</option>
+						</select>
+						<input type="text" placeholder="请输入身份证号验证真爱承诺">
+						<input type="button" value="DR真爱查询">
+						<span>Darry Ring严格规定男士凭身份证一生仅能定制一枚，象征男人一生真爱的最高承诺。输入身份证号码即可查询购买记录。</span>
+						<i>身份证有误，请重新输入。</i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 头部 -->
+
+
+	<!-- 导航栏 -->
+	<div id="nav">
+		<ul>
+			<li class="dl_nav"><a href="#">DR</a>
+				<div class="block_dl">
+					<div class="dleft">
+						<img class="d1" src="{% static '' %}" alt="">
+						<a href="#">加入DR</a>
+
+					</div>
+					<div class="dright">
+						<img class="d1" src="{% static '' %}" alt="">
+						<p><a href="#"><span>立即选购</span><img src="{% static 'images/black_icon.png' %}" alt=""></a></p>
+					</div>
+				</div>
+			</li>
+			<li class="pro_nav"><a href="#">求婚钻戒</a>
+				<div class="block">
+					<div class="left">
+						<div class="left_img">
+							<img src="{% static 'images/20150129114316f8a2465758.jpg' %}" alt="">
+						</div>
+						<ul>
+						<!-- 	<li>对戒</li>
+							<li>男戒</li>
+							<li>吊坠</li>
+							<li>耳饰</li>
+							<li>手链/手镯</li> -->
+						</ul>
+					</div>
+					<div class="right">
+						<div class="right_img">
+							<img src="{% static 'images/20150129114316f8a2465758.jpg' %}" alt="">
+						</div>
+						<ul>
+							<!-- <li>对戒</li>
+							<li>男戒</li>
+							<li>吊坠</li>
+							<li>耳饰</li>
+							<li>手链/手镯</li> -->
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li class="gift_nav"><a href="#">爱的礼物</a>
+				<div class="block">
+					<div class="left">
+						<div class="left_img">
+							<img src="{% static 'images/20150129114316f8a2465758.jpg' %}" alt="">
+						</div>
+						<ul></ul>
+					</div>
+					<div class="right">
+						<div class="right_img">
+							<img src="{% static 'images/20150129114316f8a2465758.jpg' %}" alt="">
+						</div>
+						<ul></ul>
+					</div>
+				</div>
+			</li>
+
+			<li class="dz_nav"><a href="#">钻戒定制</a></li>
+
+			<li class="shop_nav"><a href="#">DR实体店</a>
+				<div class="block_dl">
+					<div class="dleft">
+						<div class="hotCity">
+							<h5>热门城市</h5>
+							<div class="h-city">
+								<a href="#">香港</a>
+								<a href="#">香港</a>
+								<a href="#">香港</a>
+								<a href="#">香港</a>
+								<a href="#">香港</a>
+							</div>
+						</div>
+
+						<ul class="tab_class">
+						<img class="line" src="{% static 'images/lright.jpg' %}" alt="">
+							<li>
+								<b class="active">华东区</b>
+								<p style="opacity: 1;">
+								<!-- <span><a href="#">上海</a></span>
+								<span><a href="#">上海</a></span>
+								<span><a href="#">上海</a></span>
+								<span><a href="#">上海</a></span>
+								<span><a href="#">更多</a></span> -->
+								</p>
+							</li>
+							<li>
+								<b>华中区</b>
+								<p style="opacity: 0;">
+								<!-- <span><a href="#">上海1</a></span>
+								<span><a href="#">上海1</a></span>
+								<span><a href="#">上海</a></span>
+								<span><a href="#">上海</a></span>
+								<span><a href="#">更多</a></span> -->
+								</p>
+							</li>
+							<li>
+								<b>华北区</b>
+								<p style="opacity: 0;">
+								<!-- <span><a href="#">上海2</a></span>
+								<span><a href="#">上海2</a></span>
+								<span><a href="#">上海</a></span>
+								<span><a href="#">上海</a></span>
+								<span><a href="#">更多</a></span> -->
+								</p>
+							</li>
+							<li>
+								<b>华南区</b>
+								<p style="opacity: 0;">
+								<!-- <span><a href="#">上海3</a></span>
+								<span><a href="#">上海3</a></span>
+								<span><a href="#">上海</a></span>
+								<span><a href="#">上海</a></span>
+								<span><a href="#">更多</a></span> -->
+								</p>
+							</li>
+							<li>
+								<b>西南区</b>
+								<p style="opacity: 0;">
+								<!-- <span><a href="#">4</a></span>
+								<span><a href="#">上海4</a></span>
+								<span><a href="#">上海</a></span>
+								<span><a href="#">上海</a></span>
+								<span><a href="#">更多</a></span> -->
+								</p>
+							</li>
+							<li>更多&gt;&gt;</li>
+						</ul>
+					</div>
+					<div class="dright">
+						<ul class="dright-img">
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li class="brand_nav"><a href="#">DR品牌文化</a>
+				<div class="block_dl">
+					<div class="dleft">
+						<img class="d6" src="{% static '' %}" alt="">
+						<a class="a6" href="#"></a>
+
+					</div>
+					<div class="dright">
+						<img class="d6" src="{% static '' %}" alt="">
+						<a class="a6" href="#"></a>
+					</div>
+				</div>
+			</li>
+			<li class="com_nav"><a href="#">DR社区</a>
+				<div class="block_dl">
+					<div class="dleft">
+						<img class="d7" src="{% static '' %}" alt="">
+						<a class="a7" href="#"></a>
+
+					</div>
+					<div class="dright">
+						<img class="d7" src="{% static '' %}" alt="">
+						<a class="a7" href="#"></a>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<!-- 导航栏 -->
+
+	<!-- 轮播图 -->
+<!-- 	<div class="banner">
+		<ul id="list">
+				<li><img src="images/2016-1.jpg" alt=""></li>
+				<li><img src="images/2016-2.jpg" alt=""></li>
+				<li><img src="images/2016-3.jpg" alt=""></li>
+				<li><img src="images/2016-4.jpg" alt=""></li>
+		</ul>
+
+		<ul id="list2">
+				<li class='active'>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+		</ul>
+
+			<div id="pre"><a href="#1"><img src="images/leftbig.png" alt=""></a></div>
+			<div id="next"><a href="#1"><img src="images/rightbig.png" alt=""></a></div>
+	</div> -->
+	<!-- 轮播图 -->
+
+
+	<!-- goodsinfo -->
+	<div class="cort">
+		<div class="tobuy cmain">
+			<div class="spalid">
+				<span>Skip Navigation Links Darry Ring &gt; 求婚钻戒 &gt; MY HEART 系列 &gt; MY HEART 系列 奢华款</span>
+			</div>
+
+			<div class="buy_cort">
+				<div class="buycort_left fl">
+					<ul class="bc_left">
+						<!-- <li><img src="images/2015093019140361614ead1d.jpg" alt=""></li>
+						<li><img src="images/20150930191406bc384fe971.jpg" alt=""></li>
+						<li><img src="images/2015093019140702298d7dbb.jpg" alt=""></li>
+						<li><img src="images/20150930191409893f12c808.jpg" alt=""></li> -->
+					</ul>
+				</div>
+				<div class="buycort_center fl">
+					<ul class="bc_center">
+						<li>
+							<!-- <img src="images/2015093019140361614ead1d.jpg" alt=""> -->
+							<span></span>
+						</li>
+						<i></i>
+						<div class="kzyl"></div>
+					</ul>
+
+					<div class="share_bd">
+						<b>收藏藏品</b>
+						<!-- 百度分享 -->
+						<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+							<em>分享到：</em>
+						    <a class="bds_qzone"></a>
+						    <a class="bds_tsina"></a>
+						    <a class="bds_tqq"></a>
+						    <a class="bds_renren"></a>
+						    <span class="bds_more">更多</span>
+						</div>
+						<!-- 百度分享 -->
+					</div>
+				</div>
+
+				<div class="bigArea">
+						<!-- <img class="bigImg" src="images/2015093019140361614ead1d.jpg" alt=""> -->
+				</div>
+
+				<div class="buycort_right fl">
+					<div class="byright_top">
+						<!-- <p>Sweety系列 满天星耳钉[G03002]</p>
+						<p class="price"><span>￥2,599</span></p>
+						<p class="xq">
+							<i class="xq-sale">最近售出：3698</i>
+							<i class="xq-mod">用户评论：2 收藏人气：180</i>
+						</p> -->
+					</div>
+					<div class="byright_center">
+						<!-- <p class="cz">
+							<span>材质:</span>
+							<i class="pink_bor bg">白18K金</i>
+							<i class="pink_bor">PT950</i>
+						</p>
+						<p class="sc">
+							<span>手寸:</span>
+							<select name="" id="size">
+								<option value="0" selected="selected">-请选择-</option>
+								<option>5</option>
+								<option>6</option>
+								<option>7</option>
+								<option>8</option>
+								<option>9</option>
+								<option>10</option>
+								<option>11</option>
+								<option>12</option>
+								<option>13</option>
+								<option>14</option>
+							</select>
+						</p>
+						<p class="kz">
+							<span>刻字：</span>
+							<input type="text" value="" placeholder="5个汉字或10个字母" class='cutname'/>
+							<b class="write_choose">♥</b>
+							<b class="write_choose">&</b>
+							<em>预览效果</em>
+						</p> -->
+					</div>
+					<div class="arrangement">
+						<p>更多钻石搭配:</p>
+						<ul>
+							<li class="pink_bor bg">30分G色</li>
+							<li class="pink_bor">30分G色</li>
+							<li class="pink_bor">30分G色</li>
+							<li class="pink_bor">30分G色</li>
+							<li class="pink_bor">30分G色</li>
+							<li class="pink_bor">30分G色</li>
+							<li class="pink_bor">30分G色</li>
+							<li class="pink_bor">30分G色</li>
+							<li class="pink_bor">30分G色</li>
+							<li class="pink_bor">30分G色</li>
+						</ul>
+						<p class="gry">中国大陆用户付款后15个工作日内可收到货品,其它地区请咨询客服。</p>
+					</div>
+					<div class="byright_bottom">
+						<span class="join">加入购物车</span>
+						<span class="payfor">立即购买</span>
+					</div>
+
+					<p class="d-link">DR爱的礼物，秋季回馈，点击进入&gt;</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="gd_nav">
+			<ul class="gdnav_ul">
+				<li class="active goodnews"><span>商品详情</span></li>
+				<li class="com"><span>最新评论</span></li>
+				<li class="buy"><span>如何购买</span></li>
+				<li class="ques"><span>常见问答</span></li>
+				<li class="serv"><span>售后服务</span></li>
+			</ul>
+
+			<div class="allphoto">
+
+				<div class="goodnews_con cont">
+					<div class="border_cs">
+						<table border="0" border-spacing="0">
+							<tbody><tr>
+								<th>款式信息</th>
+								<td><em>产品编号：</em><span>A07001</span></td>
+								<td><em>证书类型：</em><span></span></td>
+								<td><em>材 质：</em><span></span></td>
+								<td></td>
+							</tr>
+							<tr>
+								<th>钻石信息</th>
+								<td><em>主钻重量：</em><span>0.3克拉</span></td>
+								<td><em>净 度：</em><span>VVS2</span></td>
+								<td><em>颜 色：</em><span>F</span></td>
+								<td><em>切 工：</em><span>EX</span></td>
+							</tr>
+						</tbody></table>
+					</div>
+					<p><a href="#"><img src="{% static 'images/201609061049005f2727dc35.jpg' %}" alt=""></a></p>
+					<p><a href="#"><img src="{% static 'images/201609281803202339dedb30.jpg' %}" alt=""></a></p>
+					<p><a href="#"><img src="{% static 'images/201609281803296c71b4bfd6.jpg' %}" alt=""></a></p>
+					<p><a href="#"><img src="{% static 'images/20160928180337d87ca7cc07.jpg' %}" alt=""></a></p>
+					<p><a href="#"><img src="{% static 'images/201609281803564c831acceb.jpg' %}" alt=""></a></p>
+					<p><a href="#"><img src="{% static 'images/201609281803202339dedb30.jpg' %}" alt=""></a></p>
+					<p><a href="#"><img src="{% static 'images/201609281804056706a5a051.jpg' %}" alt=""></a></p>
+				</div>
+
+				<div class="com_con cont">
+					<p><img src="{% static 'images/com.jpg' %}" alt=""></p>
+				</div>
+
+				<div class="buy_con cont">
+					<p><img src="{% static 'images/buy.jpg' %}" alt=""></p>
+				</div>
+
+				<div class="ques_con cont">
+					<p><img src="{% static 'images/ques.jpg' %}" alt=""></p>
+				</div>
+
+				<div class="serv_con cont">
+					<p><img src="{% static 'images/serv.jpg' %}" alt=""></p>
+				</div>
+			</div>
+
+			<div class="other_do cmain">
+				<div class="moreInfo">
+					<div class="moreInfo_left">
+						<img src="{% static 'images/erwei.png' %}" alt="">
+						<p>加入微信 了解品牌动态</p>
+					</div>
+					<div class="moreInfo_center">
+						<p class="pho"></p>
+						<h3>400-01-13520</h3>
+						<p>欢迎致电Darry Ring服务热线</p>
+						<p>珠宝顾问为您解答任何关于购买疑问</p>
+						<p>或钻石知识</p>
+						<p class="kf">联系在线客服</p>
+					</div>
+					<div class="moreInfo_right">
+						<p class="pho"></p>
+						<h3>预约到实体店</h3>
+						<select name="" id="">
+							<option value="请选择预约实体店" selected="selected">请选择预约实体店</option>
+							<option value="深圳实体店">深圳实体店</option>
+							<option value="北京实体店">北京实体店</option>
+							<option value="上海实体店">上海实体店</option>
+						</select>
+						<p class="txt">
+							<input type="text" class="name_txt" value="" placeholder="X先生/女士">
+							<input type="text" class="phone_txt" value="" placeholder="手机号码">
+						</p>
+
+						<span>确认预约</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="record cmain">
+				<h4>您的浏览记录</h4>
+				<div class="record_banner">
+				<ul>
+					<!-- <li>
+						<a href="#"><img src="images/2015081318151576e08c7f5c.jpg" alt=""></a>
+						<p>Love Line 系列 简奢款</p>
+					</li>
+					<li>
+						<a href="#"><img src="images/20140903125910f4a940ed90.jpg" alt=""></a>
+						<p>Love Line 系列 简奢款</p>
+					</li>
+					<li>
+						<a href="#"><img src="images/201409031259093e45b5ecf0.jpg" alt=""></a>
+						<p>Love Line 系列 简奢款</p>
+					</li>
+					<li>
+						<a href="#"><img src="images/201509301425347b86245a0e.jpg" alt=""></a>
+						<p>Love Line 系列 简奢款</p>
+					</li>
+					<li>
+						<a href="#"><img src="images/201409011559313d34c1c807.jpg" alt=""></a>
+						<p>Love Line 系列 简奢款</p>
+					</li>
+					<li>
+						<a href="#"><img src="images/2014082814202901a716bf7e.jpg" alt=""></a>
+						<p>Love Line 系列 简奢款</p>
+					</li> -->
+				</ul>
+				</div>
+
+				<span class="pre sp"></span>
+				<span class="next sp"></span>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- goodsinfo -->
+
+
+	<div class="footer">
+		<div class="dr_footer"></div>
+
+		<ul class="dr_footer-icon w1000">
+			<li><a href="#"><i class="icon1"></i><span>权威认证</span></a></li>
+			<li><a href="#"><i class="icon2"></i><span>权威认证</span></a></li>
+			<li><a href="#"><i class="icon3"></i><span>权威认证</span></a></li>
+			<li><a href="#"><i class="icon4"></i><span>权威认证</span></a></li>
+			<li><a href="#"><i class="icon5"></i><span>权威认证</span></a></li>
+			<li><a href="#"><i class="icon6"></i><span>权威认证</span></a></li>
+			<li><a href="#"><i class="icon7"></i><span>权威认证</span></a></li>
+		</ul>
+
+		<div class="dr_gray">
+			<div class="w1000">
+				<div class="dr-help-l">
+					<a href="#" class="attenus">关注我们
+						<div class="att">
+							<span class="att_wb"></span>
+							<span class="att_qz"></span>
+							<span class="att_rr"></span>
+							<span class="att_fb"></span>
+							<span class="att_tw"></span>
+							<img src="{% static 'images/app_ewm.jpg' %}" alt="">
+						</div>
+					</a>
+					<a href="#">真爱查询</a>
+					<a href="#">实体店免费预约</a>
+					<a href="#">在线客服</a>
+				</div>
+				<div class="dr-help-r">
+					<p>24小时全国免费服务热线</p>
+					<p><img src="{% static 'images/tel.png' %}" alt=""></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="dr_black">
+			<div class="w1000">
+				<ul>
+					<li>
+						<h4>关于我们</h4>
+						<a href="#">权威认证</a>
+						<a href="#">合作专区</a>
+						<a href="#">加入我们</a>
+					</li>
+					<li>
+						<h4>关于我们</h4>
+						<a href="#">权威认证</a>
+						<a href="#">合作专区</a>
+						<a href="#">加入我们</a>
+					</li>
+					<li>
+						<h4>关于我们</h4>
+						<a href="#">权威认证</a>
+						<a href="#">合作专区</a>
+						<a href="#">加入我们</a>
+					</li>
+					<li>
+						<h4>关于我们</h4>
+						<a href="#">权威认证</a>
+						<a href="#">合作专区</a>
+						<a href="#">加入我们</a>
+					</li>
+					<li>
+						<h4>关于我们</h4>
+						<a href="#">权威认证</a>
+						<a href="#">合作专区</a>
+						<a href="#">加入我们</a>
+					</li>
+					<li>
+						<h4>关于我们</h4>
+						<a href="#">权威认证</a>
+						<a href="#">合作专区</a>
+						<a href="#">加入我们</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="dr_statement">
+                <p>Copyright ©  2006-2016 www.darryring.com 戴瑞珠宝 All Rights Reserved. 粤ICP备11012085号-2</p>
+                <p>ICP经营许可证粤B2-20140279 | 中国互联网违法信息举报中心 | 中国公安网络110报警服务 | 本网站提供所售商品的正式发票 </p>
+            </div>
+
+            <div class="dr_language">
+            	<p>中文（简体）/ 中文（繁体）/ English</p>
+            </div>
+		</div>
+	</div>
+
+
+	<!-- 右侧导航 -->
+	<div class="floor">
+		<div id="top">
+		<img src="{% static 'images/zxkf.gif' %}" alt="">
+			<a href="#">在线<br>客服</a>
+		</div>
+		<div class="car size">
+			<a href="#" class="same icon_1"></a>
+			<div class=""></div>
+			<i>0</i>
+		</div>
+		<div class="card size">
+			<a href="#" class="same icon_1"></a>
+			<div class=""></div>
+		</div>
+		<div class="mysave size">
+			<a href="#" class="same icon_1"></a>
+			<div class=""></div>
+			<i>0</i>
+		</div>
+		<div class="save size">
+			<a href="#" class="same icon_1"></a>
+			<div class=""></div>
+		</div>
+		<div class="mob size">
+			<a href="#" class="same icon_1"></a>
+			<div class=""></div>
+		</div>
+		<div class="share size">
+			<a href="#" class="same icon_1"></a>
+			<div class=""></div>
+		</div>
+		<div class="back_top size">
+			<a href="#" class="same icon_1"></a>
+			<div class=""></div>
+		</div>
+		<div class="cbox"></div>
+	</div>
+	<!-- 右侧导航 -->
+
+</body>
+
+<!-- 百度分享 -->
+<script type="text/javascript" id="bdshare_js" data="type=slide&mini=1" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+	document.getElementById('bdshell_js').src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
+</script>
+<!-- 百度分享 -->
+
+</html>
+
+<!--
+需要实现的功能：轮播图（JSON数据），放大镜，购物车，登录，注册，楼梯效果...
+PC端的项目一般会写在工作简历上
+
+静态页面/动态页面
+数据存储在数据库中 《-》 后台 《-》 前端(客户端)
+ajax:接口（url）
+做页面一般有两个事：调用接口 -》显示数据在页面上
+
+c/s模式 客户端服务器模式
+b/s模式 Brower/Server
+后台语言：Java/.net/PHP
+-->

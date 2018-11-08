@@ -1,0 +1,157 @@
+.header .header_cen_lf img{
+	margin:8px auto;
+}
+.header{
+	margin:8px auto!important;
+}
+.header .header_cen .header_cen_rg .header_cen_rg_top ul{
+	float: right;
+}
+.login{
+  position: absolute;
+  top: 100px;
+  right: 240px;
+  width: 310px;
+  border-radius: 3px;
+  border: 1px solid #e4e6e8;
+  background: #fff;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.login h3{
+	text-align: center;
+	font-size: 18px;
+	height: 38px;
+	line-height: 38px;
+	margin-top: 15px;
+	color: #c67c59;
+	font-weight: 500;
+}
+.login .check{
+	width: 254px;
+	margin: 0 auto;
+}
+.login .check .info{
+  display: none;
+  border: 1px solid #ff7373;
+  background: #fff2f2 url(../images/ico-error.png) no-repeat 4px center;
+  padding: 4px 0 4px 25px;
+  color: #666;
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: -10px;
+}
+.login .check p{
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	font-size: 12px;
+}
+.login .check p a{
+	color: #999;
+	float: right;
+}
+.login .check p{
+	width: 100%;
+}
+.login .check input.user,.login .check input.pwd{
+  display: block;
+  width: 246px;
+  height: 36px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  margin-top: 20px;
+  color: #666;
+  line-height: 38px;
+  text-indent: 38px;
+  outline: none;
+}
+.login .check input.user{
+  background: url(../images/ico-uinput.png) no-repeat 12px 12px;
+}
+.login .check input.pwd{
+  background: url(../images/ico-uinput.png) no-repeat 12px -24px;
+}
+.login .check .btn a{
+  display: block;
+  width: 246px;
+  height: 36px;
+  border: 1px solid #c57d5c;
+  border-radius: 4px;
+  line-height: 38px;
+  background: #fff;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+.login .check .btn a.loginbtn{
+	color: #c57d5c;
+}
+.login .check .btn a.loginbtn:hover,.login .check .btn a.joindr:hover{
+	opacity: 0.6;
+}
+.login .check .btn a.joindr{
+	background: #c57d5c;
+	color: #fff;
+}
+.other_login{
+	height: 50px;
+	text-align: center;
+	color:#c57d5c;
+	margin-top: 20px;
+	background: #f9f9f9;
+	text-align: center;
+}
+.other_login h4{
+	margin-top: -8px;
+	font-weight: 400;
+	font-size: 12px;
+}
+.login .other_login a{
+	display: inline-block;
+	width: 30px;
+	height: 25px;
+	margin:4px 0 0 5px;
+	background: url(../images/ico-otherLogin.png) no-repeat;
+}
+.login .other_login a.qq{
+	background-position: 7px 4px;
+}
+.login .other_login a.qq:hover{
+	background-position:7px -23px;
+}
+.login .other_login a.wx{
+	background-position: -40px 4px;
+}
+.login .other_login a.wx:hover{
+	background-position:-40px -23px;
+}
+.login .other_login a.wb{
+	background-position: -87px 4px;
+}
+.login .other_login a.wb:hover{
+	background-position:-87px -23px;
+}
+.login .other_login a.zfb{
+	background-position: -134px 4px;
+}
+.login .other_login a.zfb:hover{
+	background-position:-134px -23px;
+}
+
+/*轮播图*/
+.banner,#list,#list li,#list li img{
+	height: 570px;
+}
+/*轮播图*/
+.footer{
+	padding-top: 0px;
+}
+
+
+
+
+
+

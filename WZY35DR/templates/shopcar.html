@@ -1,0 +1,101 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>shopcar</title>
+	<link rel="stylesheet" href="{% static 'css/shopcar.css' %}">
+	<script src="{% static 'js/jquery-1.12.0.js' %}"></script>
+	<script src="{% static 'js/jquery.cookie.js' %}"></script>
+	<script src="{% static 'js/shopcar.js' %}"></script>
+
+</head>
+<body>
+	<div class="w1000">
+
+			<div class="header w940">
+				<div class="logo"><img src="{% static 'images/dr.png' %}" alt=""></div>
+				<div class="head-right">
+					<span class="my-dr">我的DR</span>
+					<span class="quit">退出</span>
+					<span>帮助中心</span>
+				</div>
+			</div>
+
+			<div class="list w940"></div>
+
+			<div class="shop_cort w940">
+				<div class="shop_cort_left">
+					<div class="shop_cort_check">
+						<p>查看我的购物车 </p>
+						<a href="#">DR爱的礼物，秋季回馈，点击进入 &gt;</a>
+					</div>
+
+					<div class="good">
+						<b>商品</b>
+						<b>材质</b>
+						<b>手尺/尺寸</b>
+						<b>刻字</b>
+						<b>购买价</b>
+					</div>
+
+				<div class="show"></div>
+
+					<div class="statement">
+						<span class="clean">清空购物车</span>
+						<a href="#" class="gobuy">继续购买</a>
+						<a class="cbox">复选删除</a>
+						<span>您购买了<i class="num"> 零 </i>件商品</span>
+						<span>总计<i class="sum">￥ 0</i></span>
+						<a href="#" class="count"><i></i>立即结算</a>
+					</div>
+
+				</div>
+				<div class="shop_cort_right">
+					<h3>购物帮助指南</h3>
+					<div class="csTel">
+						<p class="online">24小时在线客服</p>
+						<p class="call">400-01-13520</p>
+					</div>
+
+					<div class="shop_safe">
+						<p class="shop_payment">支付安全保障</p>
+						<p class="shop_safty">安全支付系统采用SSL加密。</p>
+						<p class="shop_left"></p>
+						<p class="shop_mid"></p>
+						<p class="shop_right"></p>
+					</div>
+
+					<div class="shop_bottom">
+						<p class="shop_bottom_first">全球配送</p>
+						<p class="shop_bottom_second">支持全球配送,店铺取货</p>
+						<p class="shop_bottom_third">全程保价 无风险</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="bottom w940">
+				<p>Copyright © 2006-2015 www.darryring.com 戴瑞珠宝 All Rights Reserved. 粤ICP备11012085号</p>
+				<p>中国互联网违法信息举报中心 | 中国公安网络110报警服务 | 本网站提供所售商品的正式发票</p>
+
+				<div class="bot-img">
+					<img src="{% static 'images/db.jpg' %}" alt="">
+				</div>
+			</div>
+		</div>
+
+		<!-- <div class="count_box">
+			<a href="count_del"></a>
+			<div class="count_con">
+				<p class="count_box_num">商品总数：6</p>
+				<p class="count_box_price">商品总价：21321</p>
+				<span>继续购物</span>
+				<span>确定</span>
+			</div>
+		</div>
+		<div class="count_mask">
+
+		</div> -->
+</body>
+</html>

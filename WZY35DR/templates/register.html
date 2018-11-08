@@ -1,0 +1,254 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>戴瑞主页</title>
+    <link rel="stylesheet" href="{% static 'css/style1.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+    <script src="{% static 'js/jquery-1.12.0.js' %}"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+    <script src="{% static 'js/login.js' %}"></script>
+    <script src="{% static 'js/register.js' %}"></script>
+    <script src="{% static 'js/banner.js' %}"></script>
+    <script src="{% static 'js/jquery.cookie.js' %}"></script>
+
+
+</head>
+<body>
+<!-- 头部 -->
+<div class="header">
+    <div class="header_cen">
+        <div class="header_cen_lf">
+            <a href="#"><img src="{% static 'images/logo.png' %}" alt=""></a>
+        </div>
+        <div class="header_cen_rg">
+            <div class="header_cen_rg_top">
+                <ul>
+                    <li class="dl">登录</li>
+                    <li class="join"><a href="{% url 'dr:register' %}">加入DR族</a></li>
+                    <li class="num"> 400 01 13520</li>
+                    <li class="help">更多帮助&gt;</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 头部 -->
+
+
+<!-- 轮播图 -->
+<div class="banner">
+    <ul id="list"></ul>
+    <ul id="list2"></ul>
+
+    <div id="pre"><a href="ideBar#1"><img src="{% static 'images/leftbig.png' %}" alt=""></a></div>
+    <div id="next"><a href="#1"><img src="{% static 'images/rightbig.png' %}" alt=""></a></div>
+
+</div>
+
+<!-- 注册界面 -->
+<div class="register">
+    <ul>
+        <li class="moble">手机注册</li>
+        <li class="Email">邮箱注册</li>
+    </ul>
+    <div class="register_cont_phone">
+        <form action="{% url 'dr:register' %}" id="registerform" method="post">
+            {% csrf_token %}
+            <div class="info">1111</div>
+            <input class="user" id="" type="text" placeholder="请您输入您注册的手机号码" name="phone">
+            <input class="pwd" id="" type="password" placeholder="请输入长度为6-20位数的密码" name="password">
+            <input class="checkPwd" id="" type="password" placeholder="请再次确认密码">
+            <input type="text" id="checkVoiceNum_phone" placeholder="输入验证码">
+            <span>获取语音验证码</span>
+            <input type="text" id="checkNum_phone" placeholder="请输入验证码">
+            <input type="button" id="getCheckNum_phone" value="P54Q">
+            <input type="checkbox" id="agree_phone">
+            <label for="agree_phone">同意Darry Ring用户<i>注册协议</i>和<i>隐私条款</i></label>
+            <div class="btn">
+                <input type="submit" value="立即加入">
+            </div>
+        </form>
+
+        <div class="other_login">
+            <a href="#" class="qq"></a>
+            <a href="#" class="wx"></a>
+            <a href="#" class="wb"></a>
+            <a href="#" class="zfb"></a>
+            <span href="#">&gt;已有账户登录</span>
+        </div>
+    </div>
+
+    <div class="register_cont_mail">
+        <form action="" id="registerform" method="post">
+            <div class="info"></div>
+            <input class="user" id="" type="text" placeholder="请输入您的邮箱地址">
+            <input class="pwd" id="" type="password" placeholder="请输入长度为6-20位数的密码">
+            <input class="checkPwd" id="" type="password" placeholder="请再次确认密码">
+
+            <input type="text" id="checkNum_mail" placeholder="请输入验证码">
+            <input type="button" id="getCheckNum_mail" value="4LM2">
+            <input type="checkbox" id="agree_mail" checked="checked">
+            <label for="agree_mail">同意Darry Ring用户<i>注册协议</i>和<i>隐私条款</i></label>
+            <div class="btn">
+                <a class="joindr regBtn">立刻加入DR族</a>
+            </div>
+        </form>
+
+        <div class="other_login">
+            <a href="#" class="qq"></a>
+            <a href="#" class="wx"></a>
+            <a href="#" class="wb"></a>
+            <a href="#" class="zfb"></a>
+            <span href="#">&gt;已有账户登录</span>
+        </div>
+    </div>
+
+</div>
+<!-- 注册界面 -->
+
+<!-- 轮播图 -->
+
+
+<!-- 底部 -->
+<div class="footer">
+    <div class="dr_footer"></div>
+
+    <ul class="dr_footer-icon w1000">
+        <li><a href="#"><i class="icon1"></i><span>权威认证</span></a></li>
+        <li><a href="#"><i class="icon2"></i><span>权威认证</span></a></li>
+        <li><a href="#"><i class="icon3"></i><span>权威认证</span></a></li>
+        <li><a href="#"><i class="icon4"></i><span>权威认证</span></a></li>
+        <li><a href="#"><i class="icon5"></i><span>权威认证</span></a></li>
+        <li><a href="#"><i class="icon6"></i><span>权威认证</span></a></li>
+        <li><a href="#"><i class="icon7"></i><span>权威认证</span></a></li>
+    </ul>
+
+    <div class="dr_gray">
+        <div class="w1000">
+            <div class="dr-help-l">
+                <a href="#" class="attenus">关注我们
+                    <div class="att">
+                        <span class="att_wb"></span>
+                        <span class="att_qz"></span>
+                        <span class="att_rr"></span>
+                        <span class="att_fb"></span>
+                        <span class="att_tw"></span>
+                        <img src="{% static 'images/app_ewm.jpg' %}" alt="">
+                    </div>
+                </a>
+                <a href="#">真爱查询</a>
+                <a href="#">实体店免费预约</a>
+                <a href="#">在线客服</a>
+            </div>
+            <div class="dr-help-r">
+                <p>24小时全国免费服务热线</p>
+                <p><img src="{% static 'images/tel.png' %}" alt=""></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="dr_black">
+        <div class="w1000">
+            <ul>
+                <li>
+                    <h4>关于我们</h4>
+                    <a href="#">权威认证</a>
+                    <a href="#">合作专区</a>
+                    <a href="#">加入我们</a>
+                </li>
+                <li>
+                    <h4>关于我们</h4>
+                    <a href="#">权威认证</a>
+                    <a href="#">合作专区</a>
+                    <a href="#">加入我们</a>
+                </li>
+                <li>
+                    <h4>关于我们</h4>
+                    <a href="#">权威认证</a>
+                    <a href="#">合作专区</a>
+                    <a href="#">加入我们</a>
+                </li>
+                <li>
+                    <h4>关于我们</h4>
+                    <a href="#">权威认证</a>
+                    <a href="#">合作专区</a>
+                    <a href="#">加入我们</a>
+                </li>
+                <li>
+                    <h4>关于我们</h4>
+                    <a href="#">权威认证</a>
+                    <a href="#">合作专区</a>
+                    <a href="#">加入我们</a>
+                </li>
+                <li>
+                    <h4>关于我们</h4>
+                    <a href="#">权威认证</a>
+                    <a href="#">合作专区</a>
+                    <a href="#">加入我们</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="dr_statement">
+            <p>Copyright © 2006-2016 www.darryring.com 戴瑞珠宝 All Rights Reserved. 粤ICP备11012085号-2</p>
+            <p>ICP经营许可证粤B2-20140279 | 中国互联网违法信息举报中心 | 中国公安网络110报警服务 | 本网站提供所售商品的正式发票 </p>
+        </div>
+
+        <div class="dr_language">
+            <p>中文（简体）/ 中文（繁体）/ English</p>
+        </div>
+    </div>
+</div>
+<!-- 底部 -->
+
+
+<!-- 右侧导航 -->
+<div class="floor">
+    <div id="top">
+        <img src="{% static 'images/zxkf.gif' %}" alt="">
+        <a href="#">在线<br>客服</a>
+    </div>
+    <div class="car size">
+        <a href="#" class="same icon_1"></a>
+        <div class=""></div>
+        <i>0</i>
+    </div>
+    <div class="card size">
+        <a href="#" class="same icon_1"></a>
+        <div class=""></div>
+    </div>
+    <div class="mysave size">
+        <a href="#" class="same icon_1"></a>
+        <div class=""></div>
+        <i>0</i>
+    </div>
+    <div class="save size">
+        <a href="#" class="same icon_1"></a>
+        <div class=""></div>
+    </div>
+    <div class="mob size">
+        <a href="#" class="same icon_1"></a>
+        <div class=""></div>
+    </div>
+    <div class="share size">
+        <a href="#" class="same icon_1"></a>
+        <div class=""></div>
+    </div>
+    <div class="back_top size">
+        <a href="#" class="same icon_1"></a>
+        <div class=""></div>
+    </div>
+    <div class="cbox"></div>
+</div>
+<!-- 右侧导航 -->
+
+</body>
+
+<script>
+
+</script>
+</html>
